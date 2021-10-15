@@ -16,9 +16,8 @@ test("sanity", () => {
 });
 
 describe("[POST] /api/auth/register", () => {
-  let res;
   beforeEach(async () => {
-    res = await request(server)
+    await request(server)
       .post("/api/auth/register")
       .send({ username: "greg", password: "1234" });
   });
